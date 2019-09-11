@@ -1,5 +1,5 @@
 {
-  "host": "localhost",
+  "host": "db",
   "database": "JobBoard",
   "user": "jobBoardNode",
   "password": "3tBks3ZJYUxc9B",

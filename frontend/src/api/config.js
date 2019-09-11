@@ -1,5 +1,5 @@
 var config = {
-  baseURI: "http://localhost:3000"
+  baseURI: "http://localhost:8080"
 };
 
 export default config;
