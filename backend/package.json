@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Job Board Backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Amin Fazl",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "config": "^3.2.2",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "moment": "^2.24.0",
+    "mysql": "^2.17.1",
+    "winston": "^2.4.4"
+  }
+}

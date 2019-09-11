@@ -1,0 +1,63 @@
+version: '3'
+
+services:
+  frontend:
+    image: frontend
+    container_name: JobBoard_Frontend
+    restart: unless-stopped
+    tty: true
+    build:
+      context: ./frontend
+    environment:
+      NODE_ENV: development
+    ports:
+      - 80:3000
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+  backend:
+    image: backend
+    container_name: JobBoard_Backend
+    restart: unless-stopped
+    tty: true
+    build:
+      context: ./backend
+    environment:
+      NODE_ENV: development
+    ports:
+      - 8080:3000
+    depends_on:
+      - db
+    volumes:
+      - backend-logs:/logs
+    networks:
+      - app-network
+
+  db:
+    image: mysql:5
+    container_name: JobBoard_DB
+    restart: unless-stopped
+    tty: true
+    environment:
+      MYSQL_DATABASE: JobBoard
+      MYSQL_ROOT_PASSWORD: 3tBksAr3ZJYUxc9B
+      MYSQL_USER: jobBoardNode
+      MYSQL_PASSWORD: 3tBks3ZJYUxc9B
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - db-data1:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+    
+volumes:
+  db-data1:
+  backend-logs:

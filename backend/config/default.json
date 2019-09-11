@@ -1,0 +1,7 @@
+{
+  "host": "localhost",
+  "database": "JobBoard",
+  "user": "jobBoardNode",
+  "password": "3tBks3ZJYUxc9B",
+  "remoteResource": "https://drive.google.com/a/sidekicker.com.au/uc?authuser=0&id=1bOXPJDVfApwGJ4YLJiKlsdweJU2sZQ8e&export=download"
+}

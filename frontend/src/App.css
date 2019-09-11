@@ -1,0 +1,93 @@
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 8vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.jobList {
+  height: 85vh!important;
+}
+
+.jobCard {
+  padding-top: 3%; 
+  padding-bottom: 3%; 
+}
+
+.jobCard-Selected {
+  background-color: #e0f4fa;
+}
+
+.jobCard:hover {
+  background-color: rgb(219, 219, 219);
+}
+
+.jobCard .jobTitle{
+  font-weight: bold;
+}
+
+.jobCard .jobLocation{
+  font-size: .8rem;
+}
+
+.jobCard .jobDate{
+  text-align: right;
+  font-weight: 100;
+  font-size: .6rem;
+}
+
+.jobDetails {
+  font-size: .8rem;
+  margin-top: 2rem;
+}
+
+.loadingContainer {
+  text-align: center;
+}
+
+.errorContainer {
+  padding: 7%;
+  text-align: center;
+  color: rgb(85, 85, 85);
+}
+
+.errorContainer div {
+  margin-top: 2rem;
+}
+
+.errorContainer::before {
+  display: block;
+  content: "";
+  width: 5rem;
+  height: 5rem;
+  background-color: rgb(255, 95, 95);
+  -webkit-mask-image: url(./svg/baseline-error_outline.svg);
+  -webkit-mask-size: cover;
+  mask-image: url(./svg/baseline-error_outline.svg);
+  mask-size: cover;
+  margin: auto;
+}

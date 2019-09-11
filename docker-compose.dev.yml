@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5
+    container_name: JobBoard_DB
+    restart: unless-stopped
+    tty: true
+    environment:
+      MYSQL_DATABASE: JobBoard
+      MYSQL_ROOT_PASSWORD: 3tBksAr3ZJYUxc9B
+      MYSQL_USER: jobBoardNode
+      MYSQL_PASSWORD: 3tBks3ZJYUxc9B
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - db-data1:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+    
+volumes:
+  db-data1:
