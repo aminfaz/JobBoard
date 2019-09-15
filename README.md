@@ -2,6 +2,7 @@
 
 ## Description
 The Application is parsing a list of jobs and applicants from a remote server in csv format and render it in a page.
+
 [Demo](https://job-board.fazl.guru)
 
 * The application will load the CSV file only at start-up and stores it in a relational database. (assumption: applicant names are unique). 
