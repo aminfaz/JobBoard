@@ -45,6 +45,7 @@ module.exports = function(pool) {
       SELECT 
         j.id, 
         j.title, 
+        j. description,
         j.locations_id,
         l.name AS location_name, 
         j.date 
@@ -64,6 +65,7 @@ module.exports = function(pool) {
     let job = {
       id: result[0].id,
       title: result[0].title,
+      description: result[0].description,
       location: {
         id: result[0].locations_id,
         name: result[0].location_name
